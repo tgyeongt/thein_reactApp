@@ -1,4 +1,4 @@
-import type { Project } from "../../data";
+import type { Project } from "../../data/projects";
 import BulletItem from "./BulletItem";
 import Shot from "./Shot";
 import StackTag from "./StackTag";
@@ -16,7 +16,7 @@ export default function ProjectRow({ project, open, onToggle }: ProjectRowProps)
     <div className="border-b border-[#cfcfca]">
       <div
         onClick={onToggle}
-        className="grid grid-cols-[64px_1fr_auto] gap-[22px] py-[26px] px-1 cursor-pointer items-center"
+        className="grid grid-cols-[36px_1fr_auto] sm:grid-cols-[64px_1fr_auto] gap-3 sm:gap-[22px] py-[26px] px-1 cursor-pointer items-center"
       >
         <span className="font-mono font-medium text-[13px] text-[#b5b5b5]">{p.no}</span>
         <div>
@@ -24,9 +24,9 @@ export default function ProjectRow({ project, open, onToggle }: ProjectRowProps)
             <span className="font-sans font-bold text-[clamp(20px,2.4vw,28px)] leading-[1.1] tracking-[-0.02em]">
               {p.title}
             </span>
-            {p.featured && (
+            {p.award && (
               <span className="font-mono font-medium text-[10.5px] text-accent border border-accent px-[7px] py-1 tracking-[0.05em]">
-                FEATURED
+                {p.award}
               </span>
             )}
           </div>
@@ -34,8 +34,8 @@ export default function ProjectRow({ project, open, onToggle }: ProjectRowProps)
             {p.sub}
           </div>
         </div>
-        <div className="flex items-center gap-5">
-          <span className="font-mono font-medium text-xs text-[#9a9a9a] whitespace-nowrap">
+        <div className="flex items-center gap-2 sm:gap-5">
+          <span className="hidden sm:inline font-mono font-medium text-xs text-[#9a9a9a] whitespace-nowrap">
             {p.period}
           </span>
           <span
@@ -55,8 +55,8 @@ export default function ProjectRow({ project, open, onToggle }: ProjectRowProps)
           transition: "max-height .55s ease, opacity .45s ease",
         }}
       >
-        <div className="pt-2 px-1 pb-10 pl-[86px]">
-          <div className="grid grid-cols-2 gap-x-10 gap-y-[14px] max-w-[820px] mb-[26px]">
+        <div className="pt-2 px-1 pb-10 pl-6 sm:pl-[86px]">
+          <div className="grid grid-cols-2 gap-x-4 sm:gap-x-10 gap-y-[14px] max-w-[820px] mb-[26px]">
             <div>
               <span className="font-mono font-medium text-[11px] text-[#9a9a9a]">ROLE</span>
               <div className="mt-1.5 font-sans font-semibold text-[15.5px] leading-[1.4]">
@@ -90,7 +90,7 @@ export default function ProjectRow({ project, open, onToggle }: ProjectRowProps)
               <div className="mt-2">{p.result}</div>
             </div>
           )}
-          <div className="grid grid-cols-[repeat(3,minmax(0,410px))] gap-[14px] mb-6">
+          <div className="grid grid-cols-1 sm:grid-cols-[repeat(3,minmax(0,410px))] gap-[14px] mb-6">
             {p.shots.map((sh) => (
               <Shot key={sh.id} shot={sh} />
             ))}

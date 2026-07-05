@@ -1,4 +1,4 @@
-import type { ProjectShot } from "../../data";
+import type { ProjectShot } from "../../data/projects";
 
 export default function Shot({ shot }: { shot: ProjectShot }) {
   return (

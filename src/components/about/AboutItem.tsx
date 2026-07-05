@@ -1,4 +1,4 @@
-import type { AboutItem as AboutItemData } from "../../data";
+import type { AboutItem as AboutItemData } from "../../data/about";
 
 interface AboutItemProps {
   item: AboutItemData;
@@ -9,11 +9,9 @@ interface AboutItemProps {
 export default function AboutItem({ item, no, isLast }: AboutItemProps) {
   return (
     <div
-      className={`grid grid-cols-[auto_1fr] gap-[22px] py-6 border-t border-ink ${
-        isLast ? "border-b" : ""
-      }`}
+      className={`grid grid-cols-[auto_1fr] gap-[22px] py-6 divider ${isLast ? "border-b" : ""}`}
     >
-      <span className="font-mono font-bold text-[13px] text-accent">{no}</span>
+      <span className="index-badge">{no}</span>
       <div>
         <div className="font-mono font-semibold text-[11px] tracking-[0.12em] text-[#8a8a8a]">
           {item.key}

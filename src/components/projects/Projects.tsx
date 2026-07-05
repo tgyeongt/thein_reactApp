@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { DATA } from "../../data";
+import { projects } from "../../data/projects";
 import ProjectRow from "./ProjectRow";
 
 export default function Projects() {
@@ -18,10 +18,10 @@ export default function Projects() {
     <>
       <p className="reveal mb-10 font-sans text-[15.5px] leading-[1.6] text-[#8a8a8a]">
         행을 클릭하면 상세 내용과 스크린샷이 펼쳐집니다.{" "}
-        <span className="font-mono">— 총 {DATA.projects.length}건</span>
+        <span className="font-mono">— 총 {projects.length}건</span>
       </p>
-      <div className="border-t-[1.5px] border-ink">
-        {DATA.projects.map((p) => (
+      <div className="list-top-divider">
+        {projects.map((p) => (
           <ProjectRow
             key={p.id}
             project={p}

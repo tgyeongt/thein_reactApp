@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { DATA, type Stat } from "../../data";
+import { stats, type Stat } from "../../data/stats";
 
 function StatCount({ value }: { value: number }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -51,8 +51,8 @@ function StatCell({ stat }: { stat: Stat }) {
 
 export default function Stats() {
   return (
-    <div className="reveal mt-16 grid grid-cols-4 border-[1.5px] border-ink">
-      {DATA.stats.map((s) => (
+    <div className="reveal mt-10 lg:mt-16 grid grid-cols-2 sm:grid-cols-4 border-[1.5px] border-ink">
+      {stats.map((s) => (
         <StatCell key={s.label} stat={s} />
       ))}
     </div>

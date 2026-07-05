@@ -7,7 +7,7 @@ interface SectionHeadProps {
 export default function SectionHead({ no, kicker, title }: SectionHeadProps) {
   return (
     <div className="reveal flex items-baseline gap-5 mb-[54px]">
-      <span className="font-mono font-bold text-[13px] text-accent">{no}</span>
+      <span className="index-badge">{no}</span>
       <div>
         <div className="font-mono font-semibold text-xs tracking-[0.18em] text-[#8a8a8a] mb-[13px]">
           {kicker}

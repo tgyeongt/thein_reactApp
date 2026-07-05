@@ -1,4 +1,4 @@
-import type { TrainingItem as TrainingItemData } from "../../data";
+import type { TrainingItem as TrainingItemData } from "../../data/activity";
 
 interface TrainingItemProps {
   item: TrainingItemData;
@@ -7,12 +7,12 @@ interface TrainingItemProps {
 
 export default function TrainingItem({ item, imgId }: TrainingItemProps) {
   return (
-    <div className="grid grid-cols-[132px_1fr] gap-7 py-[26px] border-t border-ink items-start">
-      <div className="img-slot w-[132px] h-[132px]" data-img={imgId}>
+    <div className="grid grid-cols-1 sm:grid-cols-[132px_1fr] gap-4 sm:gap-7 py-[26px] items-start divider">
+      <div className="img-slot w-[100px] h-[100px] sm:w-[132px] sm:h-[132px]" data-img={imgId}>
         이미지
       </div>
       <div>
-        <span className="font-mono font-medium text-[11.5px] text-accent">{item.period}</span>
+        <span className="period-badge">{item.period}</span>
         <div className="mt-[9px] font-sans font-semibold text-[17.5px] leading-[1.35]">
           {item.title}
         </div>

@@ -1,7 +1,7 @@
-import { DATA } from "../../data";
+import { profile } from "../../data/profile";
 
 export default function Contact() {
-  const p = DATA.profile;
+  const p = profile;
 
   return (
     <>

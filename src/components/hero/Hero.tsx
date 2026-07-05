@@ -1,20 +1,20 @@
-import { DATA } from "../../data";
+import { profile } from "../../data/profile";
 import Console from "./Console";
 import Stats from "./Stats";
 
 export default function Hero() {
-  const p = DATA.profile;
+  const p = profile;
 
   return (
     <>
-      <div className="flex flex-wrap gap-14 items-end justify-between">
-        <div className="flex-[1_1_520px] min-w-[320px]">
+      <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start lg:items-end justify-between">
+        <div className="w-full lg:flex-1 lg:min-w-0">
           <div className="reveal flex items-center gap-3 font-mono font-medium text-xs text-[#8a8a8a] tracking-[0.14em] mb-[30px]">
             <span>PORTFOLIO</span>
             <span className="w-[26px] h-px bg-[#c9c9c9]" />
             <span>2026</span>
           </div>
-          <h1 className="reveal m-0 font-sans font-bold text-[clamp(52px,9vw,116px)] leading-[0.92] tracking-[-0.045em]">
+          <h1 className="reveal m-0 font-sans font-bold text-[clamp(52px,9vw,100px)] leading-[0.92] tracking-[-0.045em]">
             {p.name}
           </h1>
           <div className="reveal mt-[18px] font-sans text-[clamp(19px,2.4vw,30px)] leading-[1.35] tracking-[-0.02em]">

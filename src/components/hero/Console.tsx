@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { DATA } from "../../data";
+import { consoleData } from "../../data/console";
 
 function formatUptime(totalSeconds: number) {
   const hh = String(Math.floor(totalSeconds / 3600) % 1000).padStart(3, "0");
@@ -9,7 +9,7 @@ function formatUptime(totalSeconds: number) {
 }
 
 export default function Console() {
-  const c = DATA.console;
+  const c = consoleData;
   const upRef = useRef(847213);
   const [uptime, setUptime] = useState(() => formatUptime(upRef.current));
   const [latency, setLatency] = useState("11ms");
@@ -31,7 +31,7 @@ export default function Console() {
   }, [c.logs]);
 
   return (
-    <div className="reveal flex-[0_1_420px] min-w-[320px] border-[1.5px] border-ink bg-ink text-[#eaeaea]">
+    <div className="reveal w-full lg:flex-[0_1_420px] lg:min-w-[320px] border-[1.5px] border-ink bg-ink text-[#eaeaea]">
       <div className="flex items-center justify-between px-[14px] py-[11px] border-b border-[#2a2a2a]">
         <div className="flex gap-1.5 items-center">
           <span className="w-[9px] h-[9px] bg-accent" />
