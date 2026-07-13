@@ -12,10 +12,10 @@ export interface Profile {
 
 export const profile = {
   name: "박태경",
-  role: "웹 프론트엔드 · 풀스택 개발",
-  tagline: "프론트엔드를 주력으로 하는 풀스택 개발자",
+  role: "프론트엔드 · 풀스택 개발자",
+  tagline: "데이터를 이해하기 쉬운 화면으로 전달하는 프론트엔드 개발자",
   intro:
-    "안정적으로 동작하는 화면을 설계하고, 흩어진 데이터를 신뢰할 수 있는 형태로 사용자에게 전달합니다. 실제 사용자와 실서비스 배포 경험을 기준으로 개발합니다.",
+    "변화하는 데이터를 의미 있는 화면으로 표현하고 안정적으로 운영되는 서비스를 만드는 프론트엔드 개발자입니다.",
   email: "tgyeongt@gmail.com",
   github: "github.com/tgyeongt",
   githubUrl: "https://github.com/tgyeongt",

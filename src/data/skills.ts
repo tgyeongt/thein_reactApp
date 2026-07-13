@@ -6,7 +6,7 @@ export interface SkillGroup {
 export const skills = [
   {
     label: "Languages",
-    items: ["TypeScript", "JavaScript", "Python", "Java"],
+    items: ["JavaScript", "TypeScript", "Python", "Java"],
   },
   {
     label: "Frontend",
@@ -18,13 +18,14 @@ export const skills = [
       "TanStack Query",
       "Tailwind CSS",
       "Recharts",
+      "PWA",
     ],
   },
   {
     label: "Backend",
     items: ["Node.js", "Spring Boot", "Swagger"],
   },
-  { label: "Database", items: ["PostgreSQL", "MySQL", "Redis"] },
+  { label: "Database", items: ["PostgreSQL", "MySQL"] },
   {
     label: "Infra",
     items: ["AWS EC2", "Docker", "GitHub Actions", "AWS S3", "CloudFront"],

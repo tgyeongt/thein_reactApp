@@ -18,9 +18,9 @@ export default function Hero() {
             {p.name}
           </h1>
           <div className="reveal mt-[18px] font-sans text-[clamp(19px,2.4vw,30px)] leading-[1.35] tracking-[-0.02em]">
-            프론트엔드를 주력으로 하는{" "}
+            프론트엔드를 중심으로{" "}
             <strong className="font-bold [box-shadow:inset_0_-0.42em_0_rgba(31,95,224,0.14)]">
-              풀스택 개발자
+              사용자 경험을 만드는 개발자
             </strong>
           </div>
           <p className="reveal mt-[26px] max-w-[540px] font-sans text-base leading-[1.7] text-[#4a4a4a]">

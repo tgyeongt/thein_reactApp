@@ -19,7 +19,7 @@ export default function AboutItem({ item, no, isLast }: AboutItemProps) {
         <div className="mt-2.5 font-sans font-bold text-xl leading-[1.35] tracking-[-0.01em]">
           {item.title}
         </div>
-        <p className="mt-[9px] font-sans text-[15px] leading-[1.65] text-[#5a5a5a]">
+        <p className="mt-[9px] font-sans text-[15px] leading-[1.65] text-[#5a5a5a] whitespace-pre-line">
           {item.desc}
         </p>
       </div>

@@ -59,7 +59,7 @@ export default function Nav() {
             {profile.name}
           </span>
           <span className="hidden sm:inline font-mono font-medium text-[11px] text-[#9a9a9a] tracking-[0.02em]">
-            FE · FULLSTACK
+            FE · ENGINEER
           </span>
         </a>
         <div className="flex gap-3 sm:gap-[26px] items-center">
