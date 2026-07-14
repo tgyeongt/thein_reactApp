@@ -18,7 +18,7 @@ export default function Hero() {
             {p.name}
           </h1>
           <div className="reveal mt-[18px] font-sans text-[clamp(19px,2.4vw,30px)] leading-[1.35] tracking-[-0.02em]">
-            프론트엔드를 중심으로{" "}
+            프론트엔드 중심으로{" "}
             <strong className="font-bold [box-shadow:inset_0_-0.42em_0_rgba(31,95,224,0.14)]">
               사용자 경험을 만드는 개발자
             </strong>
